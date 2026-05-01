@@ -41,6 +41,7 @@ Anonymous parse metadata (request id, model, parse result, warnings, timing) —
 A small thumbnail of the uploaded image (≤ 512 px, keyed by SHA-256 hash) — up to 90 days, used to investigate parse failures and de-duplicate identical images.
 The SHA-256 hash of the uploaded image — retained indefinitely so that a previously seen image can be matched without re-uploading or re-processing the original.
 Photo originals are not retained by default. A future version of the app may offer an opt-in setting to retain originals to help improve recognition; until you explicitly enable such a setting, originals are discarded after parsing.
+The developer may periodically download copies of the retained thumbnails and parse metadata described above to a personal device protected by full-disk encryption (Apple FileVault), in order to study failure cases and improve prompts offline. Such copies remain anonymous (associated only with identifierForVendor, never with your name, email, or any account), are not transferred to any third party, and may be retained beyond the 7- and 90-day windows above for the purpose of long-term recognition-quality analysis.
 5. Children
 
 SnapSplit is not directed at children under 13. If you believe a child has provided us with data, please contact us and we will delete it.
@@ -100,6 +101,7 @@ Google Cloud Vertex AI（Gemini）：執行 OCR 與內容解析，受 Google 的
 上傳影像的小尺寸縮圖（≤ 512 px，以 SHA-256 雜湊命名）——最多保留 90 天，用於調查辨識失誤與相同影像去重。
 上傳影像的 SHA-256 雜湊值——長期保留，以便相同影像再次出現時可避免重複上傳與重複處理。
 照片原圖預設不會被保留。未來版本可能提供「保留原圖以協助改善辨識」的 opt-in 設定；在你明確開啟該設定前，原圖會在辨識後即被丟棄。
+開發者可能會定期把上述保留的縮圖與辨識中繼資料下載到一台已啟用全磁碟加密（Apple FileVault）的個人裝置，以離線研究辨識失敗案例並改善 prompt。這些副本仍維持匿名（僅以 identifierForVendor 關聯，不含姓名、電子郵件或任何帳號），不會分享給任何第三方；為了長期辨識品質分析的目的，這些副本可能會在前述 7 天 / 90 天保留期之後仍被保留。
 5. 兒童
 
 SnapSplit 並非以 13 歲以下兒童為使用對象。若你認為兒童提供了資料給我們，請來信告知，我們會刪除。
