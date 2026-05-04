@@ -1,119 +1,189 @@
-SnapSplit Privacy Policy
-Last updated: 2026-05-01
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnapSplit Privacy Policy / 隱私權政策</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                 "PingFang TC", "Heiti TC", Arial, sans-serif;
+    max-width: 720px;
+    margin: 2em auto;
+    padding: 0 1em;
+    color: #222;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+  h2 { font-size: 1.2em; margin-top: 1.8em; border-bottom: 1px solid #eee; padding-bottom: 0.2em; }
+  h3 { font-size: 1.05em; margin-top: 1.2em; }
+  .meta { color: #666; font-size: 0.9em; margin-bottom: 2em; }
+  .lang-divider {
+    margin: 3em 0 2em;
+    padding-top: 2em;
+    border-top: 2px solid #ddd;
+  }
+  ul { padding-left: 1.4em; }
+  li { margin-bottom: 0.3em; }
+  code {
+    background: #f3f3f3;
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  a { color: #0a66c2; }
+</style>
+</head>
+<body>
 
-SnapSplit is an iOS app that helps you scan menus and receipts with AI and split bills with friends. This page explains what data the app uses, where it goes, and how to remove it.
+<h1>SnapSplit Privacy Policy</h1>
+<p class="meta">Last updated: 2026-05-02</p>
 
-1. Data we collect from your device
+<p>SnapSplit is an iOS app that helps you scan menus and receipts with AI and split bills with friends. This page explains what data the app uses, where it goes, and how to remove it.</p>
 
-Photos you scan or import
+<h2>1. Data we collect from your device</h2>
 
-When you tap the scan button, the app captures or imports a photo. The photo is sent over HTTPS to our backend service hosted on Google Cloud Run (menu-parse-api-848728236997.asia-east1.run.app) and processed by Google Cloud Vertex AI (Gemini) to detect items and prices.
-Compressed photo bytes are uploaded for parsing. Photos are not used for advertising or for training third-party models beyond what Google's Vertex AI terms describe.
-Parsed results, image thumbnails, and originals (if you opt in) are stored locally on your device using SwiftData. You can wipe them at any time from Settings → Clear all local data.
-Location data
+<h3>Photos you scan or import</h3>
+<ul>
+  <li>When you tap the scan button, the app captures or imports a photo. The photo is sent over HTTPS to our backend service hosted on <strong>Google Cloud Run</strong> (<code>menu-parse-api-848728236997.asia-east1.run.app</code>) and processed by <strong>Google Cloud Vertex AI (Gemini)</strong> to detect items and prices.</li>
+  <li>Compressed photo bytes are uploaded for parsing. Photos are not used for advertising or for training third-party models beyond what Google's Vertex AI terms describe.</li>
+  <li>Parsed results, image thumbnails, and originals (if you opt in) are stored locally on your device using SwiftData. You can wipe them at any time from <em>Settings → Clear all local data</em>.</li>
+</ul>
 
-If you grant Location When In Use, the app may use your current GPS coordinates to find nearby stores and suggest a match for the scanned menu or receipt.
-If a photo from your library contains EXIF GPS metadata, those coordinates may be sent alongside the photo to help match the correct store.
-Location data is used only for store matching. It is not used for advertising, profiling, or shared with third parties.
-Microphone & Speech Recognition
+<h3>Location data</h3>
+<ul>
+  <li>If you grant <em>Location When In Use</em>, the app may use your current GPS coordinates to find nearby stores and suggest a match for the scanned menu or receipt.</li>
+  <li>If a photo from your library contains EXIF GPS metadata, those coordinates may be sent alongside the photo to help match the correct store.</li>
+  <li>Location data is used only for store matching. It is not used for advertising, profiling, or shared with third parties.</li>
+</ul>
 
-If you tap the voice search button, the app records audio via the system microphone and uses Apple's on-device or Apple-hosted Speech Recognition to convert it to text. The transcribed text is used only to fill the search field. Audio is not stored or uploaded by SnapSplit.
-Diagnostic logs
+<h3>Microphone &amp; Speech Recognition</h3>
+<ul>
+  <li>If you tap the voice search button, the app records audio via the system microphone and uses Apple's on-device or Apple-hosted Speech Recognition to convert it to text. The transcribed text is used only to fill the search field. Audio is not stored or uploaded by SnapSplit.</li>
+</ul>
 
-The app keeps a local log of API calls and errors. Logs are uploaded to our backend (POST /v1/client-logs) only when you explicitly trigger an upload from the in-app developer tools. Logs include a per-device vendor identifier (UIDevice.identifierForVendor) that resets when you uninstall the app. Logs do not include your name, account, or photos.
-2. Data we do not collect
+<h3>Diagnostic logs</h3>
+<ul>
+  <li>The app keeps a local log of API calls and errors. Logs are uploaded to our backend (<code>POST /v1/client-logs</code>) <strong>only when you explicitly trigger an upload</strong> from the in-app developer tools. Logs include a per-device vendor identifier (<code>UIDevice.identifierForVendor</code>) that resets when you uninstall the app. Logs do not include your name, account, or photos.</li>
+</ul>
 
-No account, email, password, or sign-in is required.
-No advertising identifiers (IDFA) are read.
-No third-party analytics or crash SDKs (no Firebase, Sentry, Crashlytics, Mixpanel, Amplitude, etc.).
-No payment or banking information is collected by SnapSplit. In-app purchases for SnapSplit Pro are processed entirely by Apple's StoreKit; we never see your card details.
-3. Where data is processed
+<h2>2. Data we do not collect</h2>
+<ul>
+  <li>No account, email, password, or sign-in is required.</li>
+  <li>No advertising identifiers (IDFA) are read.</li>
+  <li>No third-party analytics or crash SDKs (no Firebase, Sentry, Crashlytics, Mixpanel, Amplitude, etc.).</li>
+  <li>No payment or banking information is collected by SnapSplit. In-app purchases for SnapSplit Pro are processed entirely by Apple's StoreKit; we never see your card details.</li>
+</ul>
 
-On your device: Local storage of menus, receipts, sessions, store cache, and preferences via SwiftData / UserDefaults.
-Our backend (Google Cloud Run, Asia-East1 region): Receives the uploaded photo and metadata, calls Vertex AI, returns parsed JSON.
-Google Cloud Vertex AI (Gemini): Performs OCR / parsing. Subject to Google's data handling and retention terms.
-4. Data retention & deletion
+<h2>3. Where data is processed</h2>
+<ul>
+  <li><strong>On your device:</strong> Local storage of menus, receipts, sessions, store cache, and preferences via SwiftData / UserDefaults.</li>
+  <li><strong>Our backend (Google Cloud Run, Asia-East1 region):</strong> Receives the uploaded photo and metadata, calls Vertex AI, returns parsed JSON.</li>
+  <li><strong>Google Cloud Vertex AI (Gemini):</strong> Performs OCR / parsing. Subject to Google's data handling and retention terms.</li>
+</ul>
 
-Your scanned photos, parsed items, sessions, and store records live on your device. You can soft-delete everything from Settings → Clear all local data; deleted items are recoverable for 7 days, then removed permanently.
-Uninstalling SnapSplit removes all locally stored data.
-When you submit a photo for parsing, we may retain the following on our backend, associated only with a per-vendor device identifier (identifierForVendor) — never with your name, email, or any account:
-Anonymous parse metadata (request id, model, parse result, warnings, timing) — up to 7 days, used to monitor quality and improve our prompts.
-A small thumbnail of the uploaded image (≤ 512 px, keyed by SHA-256 hash) — up to 90 days, used to investigate parse failures and de-duplicate identical images.
-The SHA-256 hash of the uploaded image — retained indefinitely so that a previously seen image can be matched without re-uploading or re-processing the original.
-Photo originals are not retained by default. A future version of the app may offer an opt-in setting to retain originals to help improve recognition; until you explicitly enable such a setting, originals are discarded after parsing.
-The developer may periodically download copies of the retained thumbnails and parse metadata described above to a personal device protected by full-disk encryption (Apple FileVault), in order to study failure cases and improve prompts offline. Such copies remain anonymous (associated only with identifierForVendor, never with your name, email, or any account), are not transferred to any third party, and may be retained beyond the 7- and 90-day windows above for the purpose of long-term recognition-quality analysis.
-5. Children
+<h2>4. Data retention &amp; deletion</h2>
+<ul>
+  <li>Your scanned photos, parsed items, sessions, and store records live on your device. You can soft-delete everything from <em>Settings → Clear all local data</em>; deleted items are recoverable for 7 days, then removed permanently.</li>
+  <li>Uninstalling SnapSplit removes all locally stored data.</li>
+  <li>When you submit a photo for parsing, we may retain the following on our backend, associated only with a per-vendor device identifier (<code>identifierForVendor</code>) — never with your name, email, or any account:
+    <ul>
+      <li>Anonymous parse metadata (request id, model, parse result, warnings, timing) — <strong>up to 7 days</strong>, used to monitor quality and improve our prompts.</li>
+      <li>A small thumbnail of the uploaded image (≤ 512 px, keyed by SHA-256 hash) — <strong>up to 90 days</strong>, used to investigate parse failures and de-duplicate identical images.</li>
+      <li>The SHA-256 hash of the uploaded image — retained indefinitely so that a previously seen image can be matched without re-uploading or re-processing the original.</li>
+    </ul>
+    Photo originals are <strong>not</strong> retained by default. A future version of the app may offer an opt-in setting to retain originals to help improve recognition; until you explicitly enable such a setting, originals are discarded after parsing.</li>
+  <li>The developer may periodically download copies of the retained thumbnails and parse metadata described above to a personal device protected by full-disk encryption (Apple FileVault), in order to study failure cases and improve prompts offline. Such copies remain anonymous (associated only with <code>identifierForVendor</code>, never with your name, email, or any account), are not transferred to any third party, and may be retained beyond the 7- and 90-day windows above for the purpose of long-term recognition-quality analysis.</li>
+  <li><strong>Automated content-safety check.</strong> Every uploaded image is automatically screened by the same Vertex AI model that performs parsing. If the image is classified as containing sexually explicit, hateful, harassing, or dangerous content, we do <strong>not</strong> retain the thumbnail, and the parse result stored on our backend is replaced with a flag indicating the event was filtered. Only an aggregate boolean count of such filtered events is kept for auditing — we do not record which category was matched.</li>
+</ul>
 
-SnapSplit is not directed at children under 13. If you believe a child has provided us with data, please contact us and we will delete it.
+<h2>5. Children</h2>
+<p>SnapSplit is not directed at children under 13. If you believe a child has provided us with data, please contact us and we will delete it.</p>
 
-6. Your rights
+<h2>6. Your rights</h2>
+<p>You can clear all on-device data from Settings at any time. Because we do not maintain user accounts, there is no server-side profile to delete.</p>
 
-You can clear all on-device data from Settings at any time. Because we do not maintain user accounts, there is no server-side profile to delete.
+<h2>7. Changes to this policy</h2>
+<p>If this policy materially changes, the updated version will appear at this URL with a new "Last updated" date.</p>
 
-7. Changes to this policy
+<h2>8. Contact</h2>
+<p>Questions? Email <a href="mailto:yl.appstudio@icloud.com">yl.appstudio@icloud.com</a>.</p>
 
-If this policy materially changes, the updated version will appear at this URL with a new "Last updated" date.
+<div class="lang-divider"></div>
 
-8. Contact
+<h1>SnapSplit 隱私權政策（繁體中文）</h1>
+<p class="meta">最後更新：2026-05-02</p>
 
-Questions? Email yl.appstudio@icloud.com.
+<p>SnapSplit 是一款 iOS App，使用 AI 辨識菜單與收據，協助你和朋友分帳。本頁說明 App 會用到哪些資料、資料流向，以及如何刪除。</p>
 
-SnapSplit 隱私權政策（繁體中文）
-最後更新：2026-05-01
+<h2>1. 我們會用到的資料</h2>
 
-SnapSplit 是一款 iOS App，使用 AI 辨識菜單與收據，協助你和朋友分帳。本頁說明 App 會用到哪些資料、資料流向，以及如何刪除。
+<h3>你拍下或匯入的照片</h3>
+<ul>
+  <li>點擊掃描按鈕後，App 會把照片透過 HTTPS 上傳到由 <strong>Google Cloud Run</strong> 託管的後端（<code>menu-parse-api-848728236997.asia-east1.run.app</code>），由 <strong>Google Cloud Vertex AI（Gemini）</strong>進行 OCR 與內容解析。</li>
+  <li>上傳的是壓縮過的圖片資料。照片不會被用於廣告，也不會超出 Google Vertex AI 條款所允許的方式被使用。</li>
+  <li>辨識結果、縮圖、以及原圖（若你選擇開啟）會用 SwiftData 儲存在你的裝置本機。你隨時可以在<em>「設定 → 全部清空本機資料」</em>移除。</li>
+</ul>
 
-1. 我們會用到的資料
+<h3>位置資訊</h3>
+<ul>
+  <li>若你授權<em>「使用 App 期間取用位置」</em>，App 會用你目前的 GPS 座標尋找附近店家，輔助辨識結果與正確店家配對。</li>
+  <li>若你從相簿匯入的照片帶有 EXIF GPS 資訊，這些座標可能會跟隨圖片一起送到後端，以提升店家比對的準確度。</li>
+  <li>位置資料僅用於店家配對，不會用於廣告、行為分析或分享給第三方。</li>
+</ul>
 
-你拍下或匯入的照片
+<h3>麥克風與語音辨識</h3>
+<ul>
+  <li>點擊語音搜尋按鈕時，App 會使用系統麥克風錄音，並透過 Apple 提供的 Speech Recognition 將語音轉成文字。轉換後的文字僅用於填入搜尋欄。錄音不會被 SnapSplit 儲存或上傳。</li>
+</ul>
 
-點擊掃描按鈕後，App 會把照片透過 HTTPS 上傳到由 Google Cloud Run 託管的後端（menu-parse-api-848728236997.asia-east1.run.app），由 Google Cloud Vertex AI（Gemini）進行 OCR 與內容解析。
-上傳的是壓縮過的圖片資料。照片不會被用於廣告，也不會超出 Google Vertex AI 條款所允許的方式被使用。
-辨識結果、縮圖、以及原圖（若你選擇開啟）會用 SwiftData 儲存在你的裝置本機。你隨時可以在「設定 → 全部清空本機資料」移除。
-位置資訊
+<h3>診斷紀錄（log）</h3>
+<ul>
+  <li>App 會在本機保留 API 呼叫與錯誤的紀錄。**只有在你主動從 App 的開發者工具觸發上傳時**，紀錄才會送到後端 <code>POST /v1/client-logs</code>。紀錄包含一個會在你解除安裝後重置的裝置識別碼（<code>UIDevice.identifierForVendor</code>）。紀錄不包含你的姓名、帳號或照片。</li>
+</ul>
 
-若你授權「使用 App 期間取用位置」，App 會用你目前的 GPS 座標尋找附近店家，輔助辨識結果與正確店家配對。
-若你從相簿匯入的照片帶有 EXIF GPS 資訊，這些座標可能會跟隨圖片一起送到後端，以提升店家比對的準確度。
-位置資料僅用於店家配對，不會用於廣告、行為分析或分享給第三方。
-麥克風與語音辨識
+<h2>2. 我們不會收集</h2>
+<ul>
+  <li>不需要帳號、電子郵件、密碼或登入。</li>
+  <li>不讀取廣告識別碼（IDFA）。</li>
+  <li>沒有第三方分析或 Crash 追蹤 SDK（無 Firebase / Sentry / Crashlytics / Mixpanel / Amplitude）。</li>
+  <li>不收集任何付款或金融資訊。SnapSplit Pro 訂閱完全由 Apple StoreKit 處理，我們看不到你的信用卡資訊。</li>
+</ul>
 
-點擊語音搜尋按鈕時，App 會使用系統麥克風錄音，並透過 Apple 提供的 Speech Recognition 將語音轉成文字。轉換後的文字僅用於填入搜尋欄。錄音不會被 SnapSplit 儲存或上傳。
-診斷紀錄（log）
+<h2>3. 資料處理位置</h2>
+<ul>
+  <li><strong>你的裝置上：</strong>透過 SwiftData / UserDefaults 儲存菜單、收據、分帳會話、店家、偏好設定等。</li>
+  <li><strong>我們的後端（Google Cloud Run，亞洲東部 1 區）：</strong>接收上傳的圖片與 metadata，呼叫 Vertex AI，回傳解析結果 JSON。</li>
+  <li><strong>Google Cloud Vertex AI（Gemini）：</strong>執行 OCR 與內容解析，受 Google 的資料處理與保留條款規範。</li>
+</ul>
 
-App 會在本機保留 API 呼叫與錯誤的紀錄。**只有在你主動從 App 的開發者工具觸發上傳時**，紀錄才會送到後端 POST /v1/client-logs。紀錄包含一個會在你解除安裝後重置的裝置識別碼（UIDevice.identifierForVendor）。紀錄不包含你的姓名、帳號或照片。
-2. 我們不會收集
+<h2>4. 資料保留與刪除</h2>
+<ul>
+  <li>你掃描的照片、辨識結果、分帳會話、店家紀錄都儲存在你的裝置上。可在<em>「設定 → 全部清空本機資料」</em>軟刪除全部資料；刪除後 7 天內可還原，過期會永久移除。</li>
+  <li>解除安裝 SnapSplit 即可移除所有本機資料。</li>
+  <li>當你送出照片進行辨識時，我們可能會在後端保留下列資料；這些資料僅與裝置層級識別碼（<code>identifierForVendor</code>）關聯，不會綁定你的姓名、電子郵件或任何帳號：
+    <ul>
+      <li>匿名辨識中繼資料（請求 ID、模型、辨識結果、警告訊息、處理時間）——<strong>最多保留 7 天</strong>，用於品質監控與改善我們的 prompt。</li>
+      <li>上傳影像的小尺寸縮圖（≤ 512 px，以 SHA-256 雜湊命名）——<strong>最多保留 90 天</strong>，用於調查辨識失誤與相同影像去重。</li>
+      <li>上傳影像的 SHA-256 雜湊值——長期保留，以便相同影像再次出現時可避免重複上傳與重複處理。</li>
+    </ul>
+    照片原圖預設<strong>不會</strong>被保留。未來版本可能提供「保留原圖以協助改善辨識」的 opt-in 設定；在你明確開啟該設定前，原圖會在辨識後即被丟棄。</li>
+  <li>開發者可能會定期把上述保留的縮圖與辨識中繼資料下載到一台已啟用全磁碟加密（Apple FileVault）的個人裝置，以離線研究辨識失敗案例並改善 prompt。這些副本仍維持匿名（僅以 <code>identifierForVendor</code> 關聯，不含姓名、電子郵件或任何帳號），不會分享給任何第三方；為了長期辨識品質分析的目的，這些副本可能會在前述 7 天 / 90 天保留期之後仍被保留。</li>
+  <li><strong>自動內容安全檢查。</strong>每張上傳的影像都會由執行辨識的同一個 Vertex AI 模型自動進行內容安全檢查。若影像被判定為含有性露骨、仇恨、騷擾或危險內容，我們<strong>不會</strong>保留縮圖，後端儲存的辨識結果亦會被置換成一個僅標示「曾發生過此類過濾」的旗標。僅保留此類事件的彙總 boolean 計數以供稽核，不會記錄被命中的類別。</li>
+</ul>
 
-不需要帳號、電子郵件、密碼或登入。
-不讀取廣告識別碼（IDFA）。
-沒有第三方分析或 Crash 追蹤 SDK（無 Firebase / Sentry / Crashlytics / Mixpanel / Amplitude）。
-不收集任何付款或金融資訊。SnapSplit Pro 訂閱完全由 Apple StoreKit 處理，我們看不到你的信用卡資訊。
-3. 資料處理位置
+<h2>5. 兒童</h2>
+<p>SnapSplit 並非以 13 歲以下兒童為使用對象。若你認為兒童提供了資料給我們，請來信告知，我們會刪除。</p>
 
-你的裝置上：透過 SwiftData / UserDefaults 儲存菜單、收據、分帳會話、店家、偏好設定等。
-我們的後端（Google Cloud Run，亞洲東部 1 區）：接收上傳的圖片與 metadata，呼叫 Vertex AI，回傳解析結果 JSON。
-Google Cloud Vertex AI（Gemini）：執行 OCR 與內容解析，受 Google 的資料處理與保留條款規範。
-4. 資料保留與刪除
+<h2>6. 你的權利</h2>
+<p>你隨時可以在 App 設定中清空全部本機資料。由於本 App 無使用者帳號制度，伺服器端沒有需要刪除的個人檔案。</p>
 
-你掃描的照片、辨識結果、分帳會話、店家紀錄都儲存在你的裝置上。可在「設定 → 全部清空本機資料」軟刪除全部資料；刪除後 7 天內可還原，過期會永久移除。
-解除安裝 SnapSplit 即可移除所有本機資料。
-當你送出照片進行辨識時，我們可能會在後端保留下列資料；這些資料僅與裝置層級識別碼（identifierForVendor）關聯，不會綁定你的姓名、電子郵件或任何帳號：
-匿名辨識中繼資料（請求 ID、模型、辨識結果、警告訊息、處理時間）——最多保留 7 天，用於品質監控與改善我們的 prompt。
-上傳影像的小尺寸縮圖（≤ 512 px，以 SHA-256 雜湊命名）——最多保留 90 天，用於調查辨識失誤與相同影像去重。
-上傳影像的 SHA-256 雜湊值——長期保留，以便相同影像再次出現時可避免重複上傳與重複處理。
-照片原圖預設不會被保留。未來版本可能提供「保留原圖以協助改善辨識」的 opt-in 設定；在你明確開啟該設定前，原圖會在辨識後即被丟棄。
-開發者可能會定期把上述保留的縮圖與辨識中繼資料下載到一台已啟用全磁碟加密（Apple FileVault）的個人裝置，以離線研究辨識失敗案例並改善 prompt。這些副本仍維持匿名（僅以 identifierForVendor 關聯，不含姓名、電子郵件或任何帳號），不會分享給任何第三方；為了長期辨識品質分析的目的，這些副本可能會在前述 7 天 / 90 天保留期之後仍被保留。
-5. 兒童
+<h2>7. 政策變更</h2>
+<p>本政策若有實質變更，更新後的版本會公佈在本頁，並更新「最後更新」日期。</p>
 
-SnapSplit 並非以 13 歲以下兒童為使用對象。若你認為兒童提供了資料給我們，請來信告知，我們會刪除。
+<h2>8. 聯絡</h2>
+<p>有任何疑問請來信 <a href="mailto:yl.appstudio@icloud.com">yl.appstudio@icloud.com</a>。</p>
 
-6. 你的權利
-
-你隨時可以在 App 設定中清空全部本機資料。由於本 App 無使用者帳號制度，伺服器端沒有需要刪除的個人檔案。
-
-7. 政策變更
-
-本政策若有實質變更，更新後的版本會公佈在本頁，並更新「最後更新」日期。
-
-8. 聯絡
-
-有任何疑問請來信 yl.appstudio@icloud.com。
+</body>
+</html>
